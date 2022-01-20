@@ -1,0 +1,21 @@
+@import "./utils/variables";
+@import "./utils/_mixin";
+@import "./utils/placeholders";
+
+@import "./base/_reset.css";
+@import "./base/typography";
+@import "./base/base";
+
+@import "./layout/grid";
+@import "./layout/navbar";
+@import "./layout/_footer";
+
+@import "./pages/collectif";
+@import "./pages/entrainer";
+@import "./pages/home";
+@import "./pages/pourquoi";
+@import "./pages/prix";
+@import "./pages/services";
+@import "./pages/suivi";
+
+
