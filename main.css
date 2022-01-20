@@ -1,3 +1,75 @@
-@import url(d:\Developpement\projet git\copie basic-fit\base\_reset.css);
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Proza Libre';
+}
+
+nav {
+  width: vw;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 45px 0 40px;
+}
+
+nav ul li {
+  margin-right: 25px;
+}
+
+nav ul li a {
+  color: black;
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+nav ul p {
+  color: black;
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.logo {
+  width: 105px;
+  height: 40px;
+}
+
+.search {
+  margin-right: 20px;
+}
+
+.inscription {
+  margin-right: 40px;
+}
+
+.inscription button {
+  width: 120px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: #fe7000;
+}
+
+.menu-slide1 {
+  margin-right: 20px;
+}
 /*# sourceMappingURL=main.css.map */

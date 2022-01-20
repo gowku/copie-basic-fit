@@ -1,0 +1,17 @@
+@mixin flex ($flex, $justify, $align) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    
+  }
+  
+  @mixin size ($width, $height) {
+    width: $width;
+    height: $height;  
+  }
+
+  @mixin fonts ($color, $height, $size) {      
+      color: $color;
+      line-height: $height;
+      font-size: $size;
+  }

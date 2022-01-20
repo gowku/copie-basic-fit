@@ -1,0 +1,45 @@
+nav {
+   @include size (vw,100px);
+   @include flex (flex,center,center);
+
+   ul {
+       display:flex;
+       margin: 0 45px 0 40px;
+       
+
+       li {
+           margin-right: 25px;
+
+           a {            
+            @include fonts ($txt-secondary,1.2rem,1rem);
+           }
+       } 
+       
+       p {
+        @include fonts ($txt-secondary,1.2rem,1rem);
+       }
+   }
+}
+
+
+.logo {
+    @include size(105px,40px);
+}
+
+.search {
+    margin-right: 20px;
+}
+
+.inscription {
+    margin-right: 40px;
+    
+    button {
+        @include size (120px,40px);
+        text-transform: uppercase;
+        background-color: $bg-tertiary;
+    }
+}
+
+.menu-slide1 {
+    margin-right: 20px;    
+}
