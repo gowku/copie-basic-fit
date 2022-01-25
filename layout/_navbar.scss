@@ -1,45 +1,49 @@
 nav {
-   @include size (vw,100px);
-   @include flex (flex,center,center);
+  @include size(100vw, 100px);
+  @include flex(flex, center, center);
 
-   ul {
-       display:flex;
-       margin: 0 45px 0 40px;
-       
+  ul {
+    display: flex;
+    margin: 0 2.8rem 0 2.5rem;
 
-       li {
-           margin-right: 25px;
+    li {
+      margin-right: 1.5rem;
 
-           a {            
-            @include fonts ($txt-secondary,1.2rem,1rem);
-           }
-       } 
-       
-       p {
-        @include fonts ($txt-secondary,1.2rem,1rem);
-       }
-   }
+      a {
+        @include fonts($txt-secondary, 1.2rem, 1rem, 400);
+      }
+    }
+
+    p {
+      @include fonts($txt-secondary, 1.2rem, 1rem, 400);
+    }
+  }
 }
 
-
 .logo {
-    @include size(105px,40px);
+  @include size(6.5rem, 2.5rem);
 }
 
 .search {
-    margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .inscription {
-    margin-right: 40px;
-    
-    button {
-        @include size (120px,40px);
-        text-transform: uppercase;
-        background-color: $bg-tertiary;
-    }
+  margin-right: 2.5rem;
+
+  button {
+    @include size(7.5rem, 2.5rem);
+    @include fonts($txt-primary, 1.75rem, 1rem, 600);
+    text-transform: uppercase;
+    background-color: $bg-tertiary;
+  }
 }
 
 .menu-slide1 {
-    margin-right: 20px;    
+  margin-right: 1.25rem;
+  text-transform: uppercase;
+}
+
+.menu-slide2 {
+  text-transform: uppercase;
 }

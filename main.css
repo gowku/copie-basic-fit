@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 li {
   list-style-type: none;
 }
@@ -8,12 +8,13 @@ a {
   text-decoration: none;
 }
 
-* {
-  font-family: 'Proza Libre';
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 nav {
-  width: vw;
+  width: 100vw;
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,46 +31,511 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 45px 0 40px;
+  margin: 0 2.8rem 0 2.5rem;
 }
 
 nav ul li {
-  margin-right: 25px;
+  margin-right: 1.5rem;
 }
 
 nav ul li a {
   color: black;
   line-height: 1.2rem;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 nav ul p {
   color: black;
   line-height: 1.2rem;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .logo {
-  width: 105px;
-  height: 40px;
+  width: 6.5rem;
+  height: 2.5rem;
 }
 
 .search {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .inscription {
-  margin-right: 40px;
+  margin-right: 2.5rem;
 }
 
 .inscription button {
-  width: 120px;
-  height: 40px;
+  width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
   background-color: #fe7000;
 }
 
 .menu-slide1 {
-  margin-right: 20px;
+  margin-right: 1.25rem;
+  text-transform: uppercase;
+}
+
+.menu-slide2 {
+  text-transform: uppercase;
+}
+
+nav {
+  width: 100vw;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2.8rem 0 2.5rem;
+}
+
+nav ul li {
+  margin-right: 1.5rem;
+}
+
+nav ul li a {
+  color: black;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+nav ul p {
+  color: black;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.logo {
+  width: 6.5rem;
+  height: 2.5rem;
+}
+
+.search {
+  margin-right: 1.25rem;
+}
+
+.inscription {
+  margin-right: 2.5rem;
+}
+
+.inscription button {
+  width: 7.5rem;
+  height: 2.5rem;
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #fe7000;
+}
+
+.menu-slide1 {
+  margin-right: 1.25rem;
+  text-transform: uppercase;
+}
+
+.menu-slide2 {
+  text-transform: uppercase;
+}
+
+.header_home {
+  width: auto;
+  height: 855px;
+  background-color: #3b3b3b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header_home_left {
+  width: 35%;
+  height: 76%;
+  margin: auto 0 auto 20%;
+}
+
+.header_home_left h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  line-height: 5.62rem;
+  font-size: 5.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header_transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.header_description {
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 80%;
+  height: auto;
+  margin: 20px 0 40px 0;
+}
+
+.search_inscription {
+  width: 310px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search_inscription textarea {
+  height: 50px;
+}
+
+.search_inscription button {
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 50px;
+  margin: 30px 0;
+  background-color: #fe7000;
+}
+
+.search_inscription p {
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header_home_middle {
+  scale: 1.3;
+  margin-right: 300px;
+}
+
+.header_home_right {
+  position: relative;
+  right: 0px;
+  top: 90px;
+  width: 240px;
+  height: 250px;
+  color: black;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header_home_right p {
+  margin-left: 30px;
+}
+
+.header_home_right p:nth-child(2) {
+  color: #fe7000;
+}
+
+.security {
+  width: 60%;
+  height: 760px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.security button {
+  width: 300px;
+  height: 50px;
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 20px;
+  background-color: #6130ad;
+}
+
+.security_titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.security_titre h2 {
+  color: black;
+  line-height: 3.25rem;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 130px 0 100px;
+}
+
+.security_titre p {
+  color: black;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 100px 0 0 200px;
+}
+
+.security_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.security_transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+
+.card {
+  width: 190px;
+  height: 340px;
+}
+
+.card img {
+  float: left;
+  scale: 1.15;
+}
+
+.card h3 {
+  color: black;
+  line-height: 1.62rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 80px 0 30px 0;
+}
+
+.card p {
+  color: black;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.reviews {
+  width: 1050px;
+  height: 600px;
+  margin: 115px auto 70px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews_left {
+  background-color: #3b3b3b;
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews_left h2 {
+  color: white;
+  line-height: 3.25rem;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.reviews_left p {
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.reviews_left h4 {
+  color: transparent;
+  line-height: 6rem;
+  font-size: 6.87rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1px white;
+}
+
+.reviews_left button {
+  width: 330px;
+  height: 52px;
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #fe7000;
+  margin-top: 40px;
+}
+
+.notation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.notation_badge {
+  width: 45px;
+  height: 45px;
+}
+
+.notation_note {
+  margin-left: 30px;
+}
+
+.star {
+  width: 15px;
+  height: 15px;
+}
+
+.reviews_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #efefef;
+  width: 50%;
+}
+
+.reviews_right_card {
+  width: 400px;
+  height: 525px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+}
+
+.profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profil img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.profil p {
+  color: black;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.commentaire {
+  width: 275px;
+  height: 250px;
+  color: black;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */

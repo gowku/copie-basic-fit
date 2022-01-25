@@ -1,0 +1,226 @@
+@import "../layout/navbar";
+
+/////////////////////////HEADER
+
+.header_home {
+  @include size(auto, 855px);
+  background-color: $bg-secondary;
+  display: flex;
+  justify-content: center;
+}
+
+.header_home_left {
+  @include size(35%, 76%);
+  margin: auto 0 auto 20%;
+
+  h1 {
+    @include flex(flex, 0, 0);
+    flex-direction: column;
+    @include fonts($txt-primary, 5.62rem, 5.5rem, 900);
+    text-transform: uppercase;
+  }
+}
+
+.header_transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px $txt-primary;
+}
+
+.header_description {
+  @include fonts($txt-primary, 1.75rem, 1rem, 600);
+  @include size(80%, auto);
+  margin: 20px 0 40px 0;
+}
+
+.search_inscription {
+  @include size(310px, auto);
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    height: 50px;
+  }
+  button {
+    @include fonts($txt-primary, 1.75rem, 1rem, 700);
+    text-transform: uppercase;
+    height: 50px;
+    margin: 30px 0;
+    background-color: $bg-tertiary;
+  }
+  p {
+    @include fonts($txt-primary, 1.75rem, 1rem, 500);
+  }
+}
+
+.header_home_middle {
+  //@include size(35%, auto);
+  scale: 1.3;
+  margin-right: 300px;
+}
+
+.header_home_right {
+  position: relative;
+  right: 0px;
+  top: 90px;
+  @include size(240px, 250px);
+  @include fonts($txt-secondary, 1.5rem, 1.25rem, 800);
+  text-transform: uppercase;
+  background-color: $bg-quaternary;
+  @include flex(flex, space-around, 0);
+  flex-direction: column;
+
+  p {
+    margin-left: 30px;
+
+    &:nth-child(2) {
+      color: $txt-tertiary;
+    }
+  }
+}
+
+//////////////////SECURITY
+
+.security {
+  @include size(60%, 760px);
+  @include flex(flex, 0, 0);
+  margin: 0 auto;
+  flex-direction: column;
+
+  button {
+    @include size(300px, 50px);
+    @include fonts($txt-primary, 1.75rem, 1rem, 700);
+    text-transform: uppercase;
+    margin-top: 20px;
+    background-color: $bg-cinq;
+  }
+}
+
+.security_titre {
+  @include flex(flex, 0, center);
+
+  h2 {
+    @include fonts($txt-secondary, 3.25rem, 3rem, 900);
+    text-transform: uppercase;
+    margin: 130px 0 100px;
+  }
+
+  p {
+    @include fonts($txt-secondary, 1.75rem, 1rem, 500);
+    margin: 100px 0 0 200px;
+  }
+}
+
+.security_card {
+  @include flex(flex, space-around, center);
+}
+
+.security_transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px $txt-secondary;
+}
+.card {
+  @include size(190px, 340px);
+
+  img {
+    float: left;
+    scale: 1.15;
+  }
+
+  h3 {
+    @include fonts($txt-secondary, 1.62rem, 1.25rem, 700);
+    margin: 80px 0 30px 0;
+  }
+
+  p {
+    @include fonts($txt-secondary, 1.75rem, 1rem, 400);
+  }
+}
+
+///////////////REVIEWS
+
+.reviews {
+  @include size(1050px, 600px);
+  margin: 115px auto 70px auto;
+  display: flex;
+}
+
+.reviews_left {
+  background-color: $bg-secondary;
+  @include size(50%, auto);
+  @include flex(flex, center, center);
+  flex-direction: column;
+
+  h2 {
+    @include fonts($txt-primary, 3.25rem, 3rem, 900);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  p {
+    @include fonts($txt-primary, 1.75rem, 1rem, 500);
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    @include fonts(transparent, 6rem, 6.87rem, 900);
+    -webkit-text-stroke: 1px $txt-primary;
+  }
+
+  button {
+    @include size(330px, 52px);
+    @include fonts($txt-primary, 1.75rem, 1rem, 900);
+    text-transform: uppercase;
+    background-color: $bg-tertiary;
+    margin-top: 40px;
+  }
+}
+
+.notation {
+  display: flex;
+  margin-top: 40px;
+}
+
+.notation_badge {
+  @include size(45px, 45px);
+}
+
+.notation_note {
+  margin-left: 30px;
+}
+
+.star {
+  @include size(15px, 15px);
+}
+
+.reviews_right {
+  @include flex(flex, center, center);
+  background-color: $bg-six;
+  width: 50%;
+}
+
+.reviews_right_card {
+  @include size(400px, 525px);
+  @include flex(flex, space-around, center);
+  flex-direction: column;
+  background-color: $bg-primary;
+}
+
+.profil {
+  @include flex(flex, 0, center);
+
+  img {
+    @include size(80px, 80px);
+    border-radius: 50%;
+    margin-right: 50px;
+  }
+
+  p {
+    @include fonts($txt-secondary, 1.75rem, 1rem, 900);
+    text-transform: uppercase;
+  }
+}
+
+.commentaire {
+  @include size(275px, 250px);
+  @include fonts($txt-secondary, 1.75rem, 1rem, 400);
+}
