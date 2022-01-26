@@ -3,33 +3,34 @@
 /////////////////////////HEADER
 
 .header_home {
-  @include size(auto, 855px);
+  @include size(100vw, 855px);
   background-color: $bg-secondary;
-  display: flex;
-  justify-content: center;
-}
+  @include flex(flex, center, 0);
 
-.header_home_left {
-  @include size(35%, 76%);
-  margin: auto 0 auto 20%;
-
-  h1 {
-    @include flex(flex, 0, 0);
+  &_left {
+    @include size(35%, 100%);
+    @include flex(flex, space-around, 0);
     flex-direction: column;
-    @include fonts($txt-primary, 5.62rem, 5.5rem, 900);
-    text-transform: uppercase;
+    margin-left: 10%;
+
+    h1 {
+      @include flex(flex, 0, 0);
+      flex-direction: column;
+      @include fonts($txt-primary, 5.62rem, 5.5rem, 900);
+      text-transform: uppercase;
+      margin-top: 10%;
+    }
+    &-transparent {
+      color: transparent;
+      -webkit-text-stroke: 1px $txt-primary;
+    }
+
+    &-description {
+      @include fonts($txt-primary, 1.75rem, 1rem, 600);
+      @include size(80%, auto);
+      margin: 20px 0 40px 0;
+    }
   }
-}
-
-.header_transparent {
-  color: transparent;
-  -webkit-text-stroke: 1px $txt-primary;
-}
-
-.header_description {
-  @include fonts($txt-primary, 1.75rem, 1rem, 600);
-  @include size(80%, auto);
-  margin: 20px 0 40px 0;
 }
 
 .search_inscription {
@@ -49,19 +50,27 @@
   }
   p {
     @include fonts($txt-primary, 1.75rem, 1rem, 500);
+    margin-bottom: 10%;
   }
 }
 
 .header_home_middle {
-  //@include size(35%, auto);
-  scale: 1.3;
-  margin-right: 300px;
+  @include size(35%, auto);
+
+  img {
+    //scale: 1.3;
+    //width: 100%;
+    //@include size(100%, 100%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 }
 
 .header_home_right {
-  position: relative;
+  position: absolute;
+  top: 200px;
   right: 0px;
-  top: 90px;
   @include size(240px, 250px);
   @include fonts($txt-secondary, 1.5rem, 1.25rem, 800);
   text-transform: uppercase;
@@ -142,50 +151,50 @@
   @include size(1050px, 600px);
   margin: 115px auto 70px auto;
   display: flex;
-}
 
-.reviews_left {
-  background-color: $bg-secondary;
-  @include size(50%, auto);
-  @include flex(flex, center, center);
-  flex-direction: column;
+  &_left {
+    background-color: $bg-secondary;
+    @include size(50%, auto);
+    @include flex(flex, center, center);
+    flex-direction: column;
 
-  h2 {
-    @include fonts($txt-primary, 3.25rem, 3rem, 900);
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
+    h2 {
+      @include fonts($txt-primary, 3.25rem, 3rem, 900);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
 
-  p {
-    @include fonts($txt-primary, 1.75rem, 1rem, 500);
-    margin-bottom: 25px;
-  }
+    p {
+      @include fonts($txt-primary, 1.75rem, 1rem, 500);
+      margin-bottom: 25px;
+    }
 
-  h4 {
-    @include fonts(transparent, 6rem, 6.87rem, 900);
-    -webkit-text-stroke: 1px $txt-primary;
-  }
+    h4 {
+      @include fonts(transparent, 6rem, 6.87rem, 900);
+      -webkit-text-stroke: 1px $txt-primary;
+    }
 
-  button {
-    @include size(330px, 52px);
-    @include fonts($txt-primary, 1.75rem, 1rem, 900);
-    text-transform: uppercase;
-    background-color: $bg-tertiary;
-    margin-top: 40px;
+    button {
+      @include size(330px, 52px);
+      @include fonts($txt-primary, 1.75rem, 1rem, 900);
+      text-transform: uppercase;
+      background-color: $bg-tertiary;
+      margin-top: 40px;
+    }
   }
 }
 
 .notation {
   display: flex;
   margin-top: 40px;
-}
 
-.notation_badge {
-  @include size(45px, 45px);
-}
+  &_badge {
+    @include size(45px, 45px);
+  }
 
-.notation_note {
-  margin-left: 30px;
+  &_note {
+    margin-left: 30px;
+  }
 }
 
 .star {
@@ -194,33 +203,305 @@
 
 .reviews_right {
   @include flex(flex, center, center);
-  background-color: $bg-six;
+  background-color: $bg-quaternary;
   width: 50%;
+
+  &_card {
+    @include size(400px, 525px);
+    @include flex(flex, space-around, center);
+    flex-direction: column;
+    background-color: $bg-primary;
+
+    &_profil {
+      @include flex(flex, 0, center);
+
+      img {
+        @include size(80px, 80px);
+        border-radius: 50%;
+        margin-right: 50px;
+      }
+
+      p {
+        @include fonts($txt-secondary, 1.75rem, 1rem, 900);
+        text-transform: uppercase;
+      }
+
+      &_commentaire {
+        @include size(275px, 250px);
+        @include fonts($txt-secondary, 1.75rem, 1rem, 400);
+      }
+    }
+  }
 }
 
-.reviews_right_card {
-  @include size(400px, 525px);
-  @include flex(flex, space-around, center);
-  flex-direction: column;
-  background-color: $bg-primary;
-}
+////////////////////LES ABONNEMENTS
 
-.profil {
-  @include flex(flex, 0, center);
+.les_abonnements {
+  @include size(1000px, 200px);
+  margin-left: 5%;
 
-  img {
-    @include size(80px, 80px);
-    border-radius: 50%;
-    margin-right: 50px;
+  h2 {
+    @include fonts($txt-secondary, 3.25rem, 3rem, 900);
+    text-transform: uppercase;
+  }
+  &-transparent {
+    color: transparent;
+    -webkit-text-stroke: 1px $txt-secondary;
   }
 
   p {
-    @include fonts($txt-secondary, 1.75rem, 1rem, 900);
-    text-transform: uppercase;
+    @include fonts($txt-secondary, 1.75rem, 1rem, 500);
+    margin-top: 30px;
   }
 }
 
-.commentaire {
-  @include size(275px, 250px);
-  @include fonts($txt-secondary, 1.75rem, 1rem, 400);
+.abonnement {
+  @include size(100vw, 900px);
+  @include flex(flex, 0, 0);
+
+  &_left {
+    @include size(50vw, auto);
+  }
+
+  &_right {
+    @include size(50vw, auto);
+  }
+
+  &_image {
+    @include flex(flex, center, 0);
+    height: 480px;
+    background-color: $bg-quaternary;
+
+    &-orange {
+      background-color: $bg-tertiary;
+    }
+
+    img {
+      margin-bottom: 110px;
+    }
+  }
+
+  &_offre {
+    @include size(800px, 515px);
+    float: right;
+    margin-top: -110px;
+    background-color: $bg-primary;
+
+    &_description {
+      @include size(100%, 45px);
+      @include fonts($txt-quaternary, 1.75rem, 1rem, 500);
+      text-transform: uppercase;
+      background-color: $bg-secondary;
+
+      p {
+        margin-left: 20px;
+      }
+
+      &-color {
+        color: $txt-primary;
+      }
+    }
+
+    &_comfort {
+      &_titre {
+        text-transform: uppercase;
+        margin: 20px 0 0 20px;
+
+        h4 {
+          @include fonts($txt-quaternary, 1.75rem, 1.5rem, 800);
+        }
+
+        &-color {
+          color: $txt-secondary;
+        }
+      }
+
+      ul {
+        @include fonts($txt-secondary, 1.37rem, 1rem, 500);
+        margin: 30px 0 0 20px;
+
+        li {
+          margin-bottom: 15px;
+
+          &:nth-child(4) {
+            margin-bottom: 125px;
+          }
+        }
+      }
+
+      p {
+        margin: 30px 0 0 20px;
+      }
+      &_ligne {
+        @include fonts($txt-secondary, 1.37rem, 1rem, 500);
+        margin-bottom: 235px;
+      }
+
+      &_prix {
+        margin-bottom: 20px;
+
+        &-1 {
+          @include fonts($txt-secondary, 1.75rem, 2rem, 700);
+        }
+        &-2 {
+          @include fonts($txt-secondary, 0.06rem, 1rem, 700);
+        }
+        &-3 {
+          @include fonts($txt-quaternary, 0.06rem, 1rem, 400);
+        }
+      }
+      button {
+        @include size(100%, 55px);
+        @include fonts($txt-primary, 1.75rem, 1rem, 900);
+        text-transform: uppercase;
+        background-color: $bg-tertiary;
+      }
+    }
+  }
+}
+
+////////////////FORME
+
+.go_for_it {
+  @include size(90vw, 90px);
+  display: flex;
+  margin: 0 5%;
+  p {
+    @include fonts($txt-secondary, 1.75rem, 1.9rem, 900);
+    text-transform: uppercase;
+    margin-right: 10px;
+    //&::after {
+    //content: "";
+    // @include size(30px,4px);
+    // @extend %border;
+    //}
+  }
+}
+
+.forme {
+  @extend %border;
+  @include size(100vw, 660px);
+  display: flex;
+  background-color: $bg-secondary;
+
+  &_card {
+    @include size(30%, auto);
+    margin-left: 25%;
+
+    p {
+      @include fonts($txt-primary, 1.75rem, 1rem, 500);
+      margin-top: 30px;
+      width: 55%;
+    }
+
+    button {
+      @include size(55%, 60px);
+      background-color: $bg-tertiary;
+      @include fonts($txt-primary, 1.75rem, 1rem, 800);
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+
+    &_titre {
+      margin-top: 100px;
+      h4 {
+        @include fonts($txt-primary, 3.12rem, 3rem, 900);
+        text-transform: uppercase;
+      }
+
+      &-color {
+        color: $txt-tertiary;
+      }
+    }
+  }
+
+  &_image {
+    @include size(30%, auto);
+    margin-right: 15%;
+  }
+}
+
+////////////////ARTICLES
+
+.articles {
+  @include size(100vw, 750px);
+  margin-top: 200px;
+
+  &_titre {
+    @include size(100vw, 100px);
+    margin-bottom: 80px;
+
+    h4 {
+      @include fonts($txt-secondary, 3.25rem, 3rem, 900);
+      text-transform: uppercase;
+      margin-left: 25%;
+      span {
+        color: transparent;
+        -webkit-text-stroke: 1px $txt-secondary;
+      }
+    }
+  }
+
+  &_cards {
+    @include flex(flex, center, 0);
+    img {
+      position: relative;
+      z-index: 0;
+    }
+
+    &_card {
+      margin-right: 30px;
+
+      &_encard {
+        position: absolute;
+        z-index: 10;
+        @include size(430px, 275px);
+        @extend %border;
+        margin-top: -85px;
+        margin-left: 170px;
+        background-color: $bg-primary;
+
+        &_top {
+          p {
+            @include fonts($txt-secondary, 1.75rem, 0.68rem, 700);
+            text-transform: uppercase;
+            margin: 30px 0 30px 30px;
+            width: 30%;
+            padding: 0 10px;
+            @extend %border;
+            border-radius: 7px;
+          }
+        }
+
+        &_title {
+          h5 {
+            @include fonts($txt-secondary, 1.5rem, 1.25rem, 900);
+            text-transform: uppercase;
+            margin: 0 0 30px 30px;
+          }
+        }
+
+        &_description {
+          p {
+            @include fonts($txt-secondary, 1.75rem, 1rem, 500);
+          }
+        }
+
+        &_read {
+          &-1 {
+            float: right;
+            margin: 27px 10px 0 0;
+          }
+          &-2 {
+            float: right;
+            margin: 80px 10px 0 0;
+          }
+          &-3 {
+            float: right;
+            margin: 5px 10px 0 0;
+          }
+        }
+      }
+    }
+  }
 }
