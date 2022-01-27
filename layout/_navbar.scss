@@ -1,5 +1,5 @@
 nav {
-  @include size(100vw, 100px);
+  @include size(100%, 100px);
   @include flex(flex, center, center);
 
   ul {

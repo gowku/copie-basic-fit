@@ -3,7 +3,7 @@
 /////////////////////////HEADER
 
 .header_home {
-  @include size(100vw, 855px);
+  @include size(100%, 855px);
   background-color: $bg-secondary;
   @include flex(flex, center, 0);
 
@@ -256,7 +256,7 @@
 }
 
 .abonnement {
-  @include size(100vw, 900px);
+  @include size(100%, 900px);
   @include flex(flex, 0, 0);
 
   &_left {
@@ -380,7 +380,7 @@
 
 .forme {
   @extend %border;
-  @include size(100vw, 660px);
+  @include size(100%, 660px);
   display: flex;
   background-color: $bg-secondary;
 
@@ -424,11 +424,11 @@
 ////////////////ARTICLES
 
 .articles {
-  @include size(100vw, 750px);
+  @include size(100%, 750px);
   margin-top: 200px;
 
   &_titre {
-    @include size(100vw, 100px);
+    @include size(100%, 100px);
     margin-bottom: 80px;
 
     h4 {
@@ -456,7 +456,6 @@
         position: absolute;
         z-index: 10;
         @include size(430px, 275px);
-        @extend %border;
         margin-top: -85px;
         margin-left: 170px;
         background-color: $bg-primary;
@@ -502,6 +501,81 @@
           }
         }
       }
+    }
+  }
+}
+
+////////////////BAS DE PAGE /FOOTER
+
+.goforit {
+  margin-left: 15%;
+  margin-bottom: 80px;
+  h2 {
+    @include fonts($txt-tertiary, 6.25rem, 6.25rem, 900);
+    text-transform: uppercase;
+  }
+  &-color {
+    color: transparent;
+    -webkit-text-stroke: 1px $txt-tertiary;
+  }
+}
+
+.social_network {
+  @include size(100%, 90px);
+  background-color: $bg-tertiary;
+  @include flex(flex, center, center);
+
+  img {
+    margin-right: 40px;
+  }
+}
+
+.listes {
+  display: flex;
+  margin: 70px 0 0 15%;
+
+  &_liste {
+    @include size(25hvw, 200px);
+
+    h5 {
+      @include fonts($txt-secondary, 1.75rem, 1rem, 800);
+      margin-bottom: 0;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+
+      li {
+        @include fonts($txt-secondary, 1.75rem, 0.81rem, 400);
+      }
+    }
+  }
+}
+
+.baspage {
+  &_img {
+    float: right;
+    margin-top: -480px;
+  }
+}
+
+footer {
+  background-color: $bg-secondary;
+  @include size(100%, 80px);
+  margin-top: 50px;
+  img {
+    @include size(20px, 20px);
+    margin-right: 10px;
+  }
+  ul {
+    @include flex(flex, space-around, space-around);
+    margin-left: 20%;
+    li {
+      margin-top: 20px;
+      @include fonts($txt-primary, 1.75rem, 0.81rem, 400);
     }
   }
 }
