@@ -11,6 +11,10 @@ nav {
 
       a {
         @include fonts($txt-secondary, 1.2rem, 1rem, 400);
+
+        &:hover {
+          color: $txt-tertiary;
+        }
       }
     }
 

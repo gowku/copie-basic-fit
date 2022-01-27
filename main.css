@@ -49,6 +49,10 @@ nav ul li a {
   font-weight: 400;
 }
 
+nav ul li a:hover {
+  color: #fe7000;
+}
+
 nav ul p {
   color: black;
   line-height: 1.2rem;
@@ -119,6 +123,10 @@ nav ul li a {
   line-height: 1.2rem;
   font-size: 1rem;
   font-weight: 400;
+}
+
+nav ul li a:hover {
+  color: #fe7000;
 }
 
 nav ul p {
@@ -243,8 +251,16 @@ nav ul p {
           flex-direction: column;
 }
 
-.search_inscription textarea {
+.search_inscription input {
+  width: 100%;
   height: 50px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  line-height: 1.75rem;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .search_inscription button {
@@ -256,6 +272,7 @@ nav ul p {
   height: 50px;
   margin: 30px 0;
   background-color: #fe7000;
+  border: none;
 }
 
 .search_inscription p {
@@ -339,8 +356,9 @@ nav ul p {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin: 20px 0 0 2%;
   background-color: #6130ad;
+  border: none;
 }
 
 .security_titre {
@@ -361,7 +379,7 @@ nav ul p {
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin: 130px 0 100px;
+  margin: 130px 0 100px 2%;
 }
 
 .security_titre p {
@@ -369,7 +387,7 @@ nav ul p {
   line-height: 1.75rem;
   font-size: 1rem;
   font-weight: 500;
-  margin: 100px 0 0 200px;
+  margin: 100px 0 0 400px;
 }
 
 .security_card {
@@ -476,6 +494,7 @@ nav ul p {
   text-transform: uppercase;
   background-color: #fe7000;
   margin-top: 40px;
+  border: none;
 }
 
 .notation {
@@ -745,6 +764,7 @@ nav ul p {
   font-weight: 900;
   text-transform: uppercase;
   background-color: #fe7000;
+  border: none;
 }
 
 .go_for_it {
@@ -799,6 +819,7 @@ nav ul p {
   font-weight: 800;
   text-transform: uppercase;
   margin-top: 40px;
+  border: none;
 }
 
 .forme_card_titre {
@@ -989,11 +1010,15 @@ nav ul p {
   grid-gap: 10px;
 }
 
-.listes_liste ul li {
+.listes_liste ul a {
   color: black;
   line-height: 1.75rem;
   font-size: 0.81rem;
   font-weight: 400;
+}
+
+.listes_liste ul a:hover {
+  border-bottom: 1px solid black;
 }
 
 .baspage_img {
@@ -1028,9 +1053,16 @@ footer ul {
 
 footer ul li {
   margin-top: 20px;
+}
+
+footer ul li a {
   color: white;
   line-height: 1.75rem;
   font-size: 0.81rem;
   font-weight: 400;
+}
+
+footer ul li a:hover {
+  border-bottom: 1px solid white;
 }
 /*# sourceMappingURL=main.css.map */
