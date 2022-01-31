@@ -7,9 +7,15 @@
 
   &-primary {
     background-color: $bg-tertiary;
+    &:hover {
+      background-color: lighten($color: $bg-tertiary, $amount: 20%);
+    }
   }
 
   &-secondary {
     background-color: $bg-cinq;
+    &:hover {
+      background-color: lighten($color: $bg-cinq, $amount: 20%);
+    }
   }
 }
