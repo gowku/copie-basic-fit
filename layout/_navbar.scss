@@ -37,9 +37,6 @@ nav {
 
   button {
     @include size(7.5rem, 2.5rem);
-    @include fonts($txt-primary, 1.75rem, 1rem, 600);
-    text-transform: uppercase;
-    background-color: $bg-tertiary;
   }
 }
 

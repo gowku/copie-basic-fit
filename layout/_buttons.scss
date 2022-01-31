@@ -1,0 +1,15 @@
+.btn {
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  @include fonts($txt-primary, 1.75rem, 1rem, 700);
+  color: $txt-primary;
+
+  &-primary {
+    background-color: $bg-tertiary;
+  }
+
+  &-secondary {
+    background-color: $bg-cinq;
+  }
+}
