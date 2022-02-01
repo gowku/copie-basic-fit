@@ -1,10 +1,11 @@
+@import "../utils/keyframes";
 @import "../layout/navbar";
 @import "../layout/buttons";
 
 /////////////////////////HEADER
 
 .header_home {
-  @include size(100%, 855px);
+  @include size(100%, 900px);
   background-color: $bg-secondary;
   @include flex(flex, center, 0);
 
@@ -13,6 +14,7 @@
     @include flex(flex, space-around, 0);
     flex-direction: column;
     margin-left: 10%;
+    animation: translateY 1s ease-out;
 
     h1 {
       @include flex(flex, 0, 0);
@@ -20,6 +22,7 @@
       @include fonts($txt-primary, 5.62rem, 5.5rem, 900);
       text-transform: uppercase;
       margin-top: 10%;
+      white-space: nowrap;
     }
     &-transparent {
       color: transparent;
@@ -59,6 +62,7 @@
 
 .header_home_middle {
   @include size(35%, auto);
+  animation: header_home_middle 1s ease-out;
 
   //img {
   //scale: 1.3;
@@ -93,19 +97,22 @@
 //////////////////SECURITY
 
 .security {
-  @include size(60%, 760px);
+  @include size(60%, 900px);
   @include flex(flex, 0, 0);
   margin: 0 auto;
   flex-direction: column;
 
   button {
     @include size(250px, 50px);
-    margin: 20px 0 0 2%;
+    margin: 60px 0 0 2%;
+    animation: button 0.4s ease-out;
+    transform-origin: bottom;
   }
 }
 
 .security_titre {
   @include flex(flex, 0, center);
+  white-space: nowrap;
 
   h2 {
     @include fonts($txt-secondary, 3.25rem, 3rem, 900);
@@ -128,7 +135,28 @@
   -webkit-text-stroke: 1px $txt-secondary;
 }
 .card {
-  @include size(190px, 340px);
+  @include size(190px, 440px);
+  margin-right: 10px;
+
+  &-1 {
+    animation: security 1s ease-out;
+  }
+  &-2 {
+    animation: security 1s ease-out;
+    animation-delay: 0.1s;
+  }
+  &-3 {
+    animation: security 1s ease-out;
+    animation-delay: 0.2s;
+  }
+  &-4 {
+    animation: security 1s ease-out;
+    animation-delay: 0.3s;
+  }
+  &-5 {
+    animation: security 1s ease-out;
+    animation-delay: 0.4s;
+  }
 
   img {
     float: left;
@@ -157,6 +185,11 @@
     @include size(50%, auto);
     @include flex(flex, center, center);
     flex-direction: column;
+    overflow: hidden;
+
+    &-anim {
+      animation: translateY 1s ease-out;
+    }
 
     h2 {
       @include fonts($txt-primary, 3.25rem, 3rem, 900);
@@ -209,6 +242,7 @@
     @include flex(flex, space-around, center);
     flex-direction: column;
     background-color: $bg-primary;
+    animation: reviews_right_card 1s ease-out;
 
     &_profil {
       @include flex(flex, 0, center);
@@ -237,6 +271,7 @@
 .les_abonnements {
   @include size(1000px, 200px);
   margin-left: 5%;
+  margin-bottom: 100px;
 
   h2 {
     @include fonts($txt-secondary, 3.25rem, 3rem, 900);
@@ -256,6 +291,9 @@
 .abonnement {
   @include size(100%, 900px);
   @include flex(flex, 0, 0);
+  :hover {
+    transform: translateY(-5%);
+  }
 
   &_left {
     @include size(50vw, auto);
@@ -269,6 +307,8 @@
     @include flex(flex, center, 0);
     height: 480px;
     background-color: $bg-quaternary;
+    position: relative;
+    z-index: 0;
 
     &-orange {
       background-color: $bg-tertiary;
@@ -276,14 +316,17 @@
 
     img {
       margin-bottom: 110px;
+      animation: abonement_img 1s ease-out;
     }
   }
 
   &_offre {
+    position: relative;
     @include size(80%, 515px);
     float: right;
     margin-top: -110px;
     background-color: $bg-primary;
+    z-index: 1;
 
     &_description {
       @include size(100%, 45px);
@@ -357,102 +400,6 @@
 
 ////////////////FORME
 
-// .go_for_it {
-//   @include size(90vw, 90px);
-//   display: flex;
-//   margin: 0 5%;
-//   overflow: hidden;
-//   @extend %border;
-//   text-align: center;
-//   align-items: center;
-
-//   .t1 {
-//     color: blue;
-//   }
-//   .t2 {
-//     color: red;
-//   }
-
-//   p {
-//     @include fonts($txt-secondary, 1.75rem, 1.9rem, 900);
-//     text-transform: uppercase;
-//     margin-right: 10px;
-//     //margin-top: 10px;
-
-//     white-space: nowrap;
-//     transform: translateX(100%);
-//     animation: scroll-left 30s linear infinite;
-
-//     @keyframes scroll-left {
-//       0% {
-//         transform: translateX(100%);
-//       }
-
-//       100% {
-//         transform: translateX(-100%);
-//       }
-//     }
-
-//     ::after {
-//       content: "";
-//       display: inline-block;
-//       background: $bg-quaternary;
-//       @include size(60px, 8px);
-//       margin: 7px 20px;
-//       border: $bg-quaternary solid 1px;
-//     }
-//   }
-// }
-
-// .go_for_it {
-//   @include size(90vw, 90px);
-
-//   display: flex;
-//   margin: 0 5%;
-//   overflow: hidden;
-//   @extend %border;
-//   text-align: center;
-//   align-items: center;
-
-//   .t1 {
-//     color: blue;
-//   }
-//   .t2 {
-//     color: red;
-//   }
-
-//   span {
-//     display: flex;
-//     @include fonts($txt-secondary, 1.75rem, 1.9rem, 900);
-//     text-transform: uppercase;
-//     margin-right: 10px;
-//     //margin-top: 10px;
-
-//     white-space: nowrap;
-//     transform: translateX(100%);
-//     animation: scroll-left 30s linear infinite;
-
-//     @keyframes scroll-left {
-//       0% {
-//         transform: translateX(100%);
-//       }
-
-//       100% {
-//         transform: translateX(-100%);
-//       }
-//     }
-
-//     ::after {
-//       content: "";
-//       display: inline-block;
-//       background: $bg-quaternary;
-//       @include size(60px, 8px);
-//       margin: 7px 20px;
-//       border: $bg-quaternary solid 1px;
-//     }
-//   }
-// }
-
 .go_for_it {
   @include size(90vw, 90px);
   display: flex;
@@ -461,7 +408,20 @@
   text-align: center;
   align-items: center;
 
+  .t1 {
+    background-color: red;
+  }
+  .t2 {
+    background-color: blue;
+  }
+
   .text {
+    display: flex;
+    @include fonts($txt-secondary, 1.75rem, 1.9rem, 900);
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: translateX(100%);
+    animation: defilement 20s ease-out infinite;
     hr {
       width: 60px;
       height: 8px;
@@ -470,25 +430,63 @@
       margin: 0 20px;
       border: none;
     }
-    display: flex;
-
-    @include fonts($txt-secondary, 1.75rem, 1.9rem, 900);
-    text-transform: uppercase;
-    white-space: nowrap;
-    transform: translateX(100%);
-    animation: scroll-left 10s linear infinite;
-
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(100%);
-      }
-
-      100% {
-        transform: translateX(-100%);
-      }
-    }
   }
 }
+
+// .go_for_it {
+//   @include size(90vw, 90px);
+//   display: flex;
+//   margin: 0 5%;
+//   overflow: hidden;
+//   text-align: center;
+//   align-items: center;
+
+//   .text-1 {
+//     background-color: red;
+//     animation: defilement 10s ease-out infinite;
+//   }
+//   .text-2 {
+//     background-color: blue;
+//     animation: defilement 10s ease-out infinite;
+//   }
+
+//   .text-1,
+//   .text-2 {
+//     hr {
+//       width: 60px;
+//       height: 8px;
+//       background-color: $bg-quaternary;
+//       align-self: center;
+//       margin: 0 20px;
+//       border: none;
+//     }
+//     display: flex;
+
+//     @include fonts($txt-secondary, 1.75rem, 1.9rem, 900);
+//     text-transform: uppercase;
+//     white-space: nowrap;
+//   }
+// }
+
+// @keyframes defilement {
+//   0% {
+//     margin-left: 0%;
+//   }
+
+//   100% {
+//     margin-left: 100%;
+//   }
+// }
+
+// @keyframes defilement2 {
+//   0% {
+//     margin-left: 0%;
+//   }
+
+//   100% {
+//     margin-left: 100%;
+//   }
+// }
 
 .forme {
   @extend %border;
@@ -497,23 +495,24 @@
   background-color: $bg-secondary;
 
   &_card {
-    @include size(30%, auto);
+    @include size(35%, auto);
     margin-left: 25%;
+    animation: translateY 1s ease-out;
 
     p {
       @include fonts($txt-primary, 1.75rem, 1rem, 500);
       margin-top: 30px;
-      width: 55%;
     }
 
     button {
-      @include size(55%, 60px);
-
+      @include size(400px, 60px);
+      white-space: nowrap;
       margin-top: 40px;
     }
 
     &_titre {
       margin-top: 100px;
+      white-space: nowrap;
       h4 {
         @include fonts($txt-primary, 3.12rem, 3rem, 900);
         text-transform: uppercase;
@@ -527,7 +526,9 @@
 
   &_image {
     @include size(30%, auto);
+    position: relative;
     margin-right: 15%;
+    animation: translateX 1s ease-out;
   }
 }
 
