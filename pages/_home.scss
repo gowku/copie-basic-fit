@@ -5,12 +5,12 @@
 /////////////////////////HEADER
 
 .header_home {
-  @include size(100%, 900px);
+  @include size(100%, auto);
   background-color: $bg-secondary;
   @include flex(flex, center, 0);
 
   &_left {
-    @include size(35%, 100%);
+    @include size(35%, auto);
     @include flex(flex, space-around, 0);
     flex-direction: column;
     margin-left: 10%;
@@ -97,7 +97,7 @@
 //////////////////SECURITY
 
 .security {
-  @include size(60%, 900px);
+  @include size(60%, auto);
   @include flex(flex, 0, 0);
   margin: 0 auto;
   flex-direction: column;
@@ -108,55 +108,56 @@
     animation: button 0.4s ease-out;
     transform-origin: bottom;
   }
-}
 
-.security_titre {
-  @include flex(flex, 0, center);
-  white-space: nowrap;
+  &_titre {
+    @include flex(flex, 0, center);
+    white-space: nowrap;
 
-  h2 {
-    @include fonts($txt-secondary, 3.25rem, 3rem, 900);
-    text-transform: uppercase;
-    margin: 130px 0 100px 2%;
+    h2 {
+      @include fonts($txt-secondary, 3.25rem, 3rem, 900);
+      text-transform: uppercase;
+      margin: 130px 0 100px 2%;
+    }
+
+    a {
+      @include fonts($txt-secondary, 1.75rem, 1rem, 500);
+      margin: 100px 0 0 400px;
+    }
   }
 
-  p {
-    @include fonts($txt-secondary, 1.75rem, 1rem, 500);
-    margin: 100px 0 0 400px;
+  &_card {
+    @include flex(flex, space-around, center);
+  }
+
+  &_transparent {
+    color: transparent;
+    -webkit-text-stroke: 1px $txt-secondary;
   }
 }
 
-.security_card {
-  @include flex(flex, space-around, center);
-}
-
-.security_transparent {
-  color: transparent;
-  -webkit-text-stroke: 1px $txt-secondary;
-}
 .card {
   @include size(190px, 440px);
   margin-right: 10px;
 
-  &-1 {
-    animation: security 1s ease-out;
-  }
-  &-2 {
-    animation: security 1s ease-out;
-    animation-delay: 0.1s;
-  }
-  &-3 {
-    animation: security 1s ease-out;
-    animation-delay: 0.2s;
-  }
-  &-4 {
-    animation: security 1s ease-out;
-    animation-delay: 0.3s;
-  }
-  &-5 {
-    animation: security 1s ease-out;
-    animation-delay: 0.4s;
-  }
+  // &-1 {
+  //   animation: security 1s ease-out;
+  // }
+  // &-2 {
+  //   animation: security 1s ease-out;
+  //   animation-delay: 0.1s;
+  // }
+  // &-3 {
+  //   animation: security 1s ease-out;
+  //   animation-delay: 0.2s;
+  // }
+  // &-4 {
+  //   animation: security 1s ease-out;
+  //   animation-delay: 0.3s;
+  // }
+  // &-5 {
+  //   animation: security 1s ease-out;
+  //   animation-delay: 0.4s;
+  // }
 
   img {
     float: left;
@@ -173,10 +174,17 @@
   }
 }
 
+@for $i from 0 to 5 {
+  .card-#{$i} {
+    animation: security 1s ease-out;
+    animation-delay: $i * 0.1s;
+  }
+}
+
 ///////////////REVIEWS
 
 .reviews {
-  @include size(1050px, 600px);
+  @include size(50%, 600px);
   margin: 115px auto 70px auto;
   display: flex;
 
@@ -238,7 +246,7 @@
   width: 50%;
 
   &_card {
-    @include size(400px, 525px);
+    @include size(80%, 525px);
     @include flex(flex, space-around, center);
     flex-direction: column;
     background-color: $bg-primary;
@@ -269,7 +277,7 @@
 ////////////////////LES ABONNEMENTS
 
 .les_abonnements {
-  @include size(1000px, 200px);
+  @include size(45%, auto);
   margin-left: 5%;
   margin-bottom: 100px;
 
@@ -289,18 +297,19 @@
 }
 
 .abonnement {
-  @include size(100%, 900px);
+  @include size(100%, auto);
   @include flex(flex, 0, 0);
+
   :hover {
     transform: translateY(-5%);
   }
 
   &_left {
-    @include size(50vw, auto);
+    @include size(50%, auto);
   }
 
   &_right {
-    @include size(50vw, auto);
+    @include size(50%, auto);
   }
 
   &_image {
@@ -401,7 +410,7 @@
 ////////////////FORME
 
 .go_for_it {
-  @include size(90vw, 90px);
+  @include size(90%, 90px);
   display: flex;
   margin: 0 5%;
   overflow: hidden;
@@ -490,7 +499,7 @@
 
 .forme {
   @extend %border;
-  @include size(100%, 660px);
+  @include size(100%, auto);
   display: flex;
   background-color: $bg-secondary;
 
@@ -535,7 +544,7 @@
 ////////////////ARTICLES
 
 .articles {
-  @include size(100%, 750px);
+  @include size(100%, auto);
   margin-top: 200px;
 
   &_titre {
@@ -566,7 +575,7 @@
       &_encard {
         position: absolute;
         z-index: 10;
-        @include size(430px, 275px);
+        @include size(21%, 275px);
         margin-top: -85px;
         margin-left: 170px;
         background-color: $bg-primary;
@@ -621,6 +630,9 @@
 .goforit {
   margin-left: 15%;
   margin-bottom: 80px;
+  margin-top: 200px;
+  // margin: 200px, 0, 80px, 15%;
+
   h2 {
     @include fonts($txt-tertiary, 6.25rem, 6.25rem, 900);
     text-transform: uppercase;
@@ -701,3 +713,5 @@ footer {
     }
   }
 }
+
+@import "../layout/mediaquery";

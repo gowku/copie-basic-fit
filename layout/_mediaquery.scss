@@ -1,0 +1,210 @@
+@media screen and (max-width: 400px) {
+  nav {
+    height: auto;
+    flex-direction: column;
+    ul {
+      flex-direction: column;
+      align-items: center;
+      li {
+        margin-top: 10px;
+      }
+    }
+    a {
+      margin-top: 10px;
+    }
+    p {
+      margin: 10px 0;
+    }
+  }
+
+  .header_home {
+    flex-direction: column;
+
+    &_left {
+      width: 100%;
+
+      justify-content: space-between;
+      margin-left: 0;
+
+      h1 {
+        margin-left: 10%;
+        @include fonts($txt-primary, 5.62rem, 3.5rem, 900);
+      }
+
+      p {
+        margin-left: 15%;
+      }
+    }
+
+    &_middle {
+      width: 100%;
+
+      img {
+        margin-top: 200px;
+        margin-left: 10%;
+        width: 75%;
+      }
+    }
+
+    &_right {
+      top: 1300px;
+    }
+  }
+
+  .search_inscription {
+    margin-left: 10%;
+  }
+
+  .security {
+    width: 100%;
+    margin: 0;
+
+    &_titre {
+      flex-direction: column;
+
+      h2 {
+        white-space: normal;
+        margin: 80px 0 0 2%;
+      }
+      a {
+        margin-left: -100px;
+        margin-bottom: 100px;
+      }
+    }
+
+    &_card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .card {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .reviews {
+    @include size(100%, auto);
+    flex-direction: column;
+    margin: 0;
+
+    &_left {
+      width: 100%;
+      button {
+        margin-bottom: 50px;
+      }
+    }
+    &_right {
+      width: 100%;
+    }
+  }
+
+  .les_abonnements {
+    @include size(100%, auto);
+    margin: 0 0 100px;
+  }
+
+  .abonnement {
+    flex-direction: column;
+    :hover {
+      transform: none;
+    }
+    &_left {
+      width: 100%;
+    }
+    &_right {
+      width: 100%;
+    }
+  }
+
+  .go_for_it {
+    margin-top: 40px;
+  }
+
+  .forme {
+    flex-direction: column;
+
+    &_card {
+      margin: 0;
+      width: 100%;
+      &_titre {
+        white-space: normal;
+      }
+    }
+    &_image {
+      width: 100%;
+    }
+  }
+
+  .articles {
+    &_titre h4 {
+      margin-left: 10%;
+    }
+
+    &_cards {
+      flex-direction: column;
+      margin-left: 6%;
+
+      &_card {
+        display: flex;
+        flex-direction: column;
+        position: static;
+
+        &_encard {
+          position: static;
+          margin: 0;
+          width: 100%;
+
+          &_top {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  .goforit {
+    margin-left: 8%;
+    margin-top: 50px;
+  }
+
+  .baspage {
+    display: flex;
+    flex-direction: column;
+  }
+  .listes {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+  }
+
+  .list2 {
+    margin-top: 50px;
+  }
+
+  .baspage_img {
+    position: static;
+    margin-top: -50px;
+  }
+
+  footer {
+    height: auto;
+    ul {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      white-space: nowrap;
+
+      :nth-child(1) {
+        grid-column: span 2;
+        margin-left: 25px;
+      }
+    }
+  }
+}
