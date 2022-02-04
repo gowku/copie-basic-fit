@@ -1,0 +1,83 @@
+.goforit {
+  margin: 200px 0 80px 15%;
+
+  h2 {
+    @include fonts($txt-tertiary, 6.25rem, 6.25rem, 900);
+    text-transform: uppercase;
+  }
+  &-color {
+    color: transparent;
+    -webkit-text-stroke: 1px $txt-tertiary;
+  }
+}
+
+.social_network {
+  @include size(100%, 90px);
+  background-color: $bg-tertiary;
+  @include flex(flex, center, center);
+
+  img {
+    margin-right: 40px;
+  }
+}
+
+.listes {
+  display: flex;
+  margin: 70px 0 0 15%;
+
+  &_liste {
+    @include size(25hvw, 200px);
+
+    h5 {
+      @include fonts($txt-secondary, 1.75rem, 1rem, 800);
+      margin-bottom: 0;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+
+      a {
+        @include fonts($txt-secondary, 1.75rem, 0.81rem, 400);
+
+        &:hover {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+.baspage {
+  &_img {
+    float: right;
+    margin-top: -480px;
+  }
+}
+
+footer {
+  background-color: $bg-secondary;
+  @include size(100%, 80px);
+  margin-top: 50px;
+  img {
+    @include size(20px, 20px);
+    margin-right: 10px;
+  }
+  ul {
+    @include flex(flex, space-around, space-around);
+    margin-left: 20%;
+
+    li {
+      margin-top: 20px;
+      a {
+        @include fonts($txt-primary, 1.75rem, 0.81rem, 400);
+
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}
